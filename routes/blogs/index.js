@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const blogs_1 = require("../../controllers/blogs");
+const router = (0, express_1.Router)();
+//FIXME: fix route paths;
+router.post("/add-blog", blogs_1.addBlog);
+router.get("/get-blogs", blogs_1.getBlogs);
+router.delete("/delete-blog", blogs_1.deleteBlog);
+router.patch("/update-blog", blogs_1.updateBlog);
+exports.default = router;
